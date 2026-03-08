@@ -17,6 +17,7 @@ bool is_ident_rest(char c) {
 TokenType keyword_from_text(const std::string& text) {
   if (text == "SELECT") return TokenType::Select;
   if (text == "FROM") return TokenType::From;
+  if (text == "WHERE") return TokenType::Where;
   if (text == "CREATE") return TokenType::Create;
   if (text == "TABLE") return TokenType::Table;
   if (text == "INSERT") return TokenType::Insert;
@@ -25,6 +26,9 @@ TokenType keyword_from_text(const std::string& text) {
   if (text == "INT") return TokenType::Int;
   if (text == "FLOAT") return TokenType::Float;
   if (text == "STRING") return TokenType::String;
+  if (text == "AND") return TokenType::And;
+  if (text == "OR") return TokenType::Or;
+  if (text == "NOT") return TokenType::Not;
   return TokenType::Identifier;
 }
 
@@ -64,7 +68,15 @@ std::vector<Token> lex(const std::string& source) {
     else if (cur == '(') { emit(TokenType::LParen, "("); ++p; ++column; }
     else if (cur == ')') { emit(TokenType::RParen, ")"); ++p; ++column; }
     else if (cur == '*') { emit(TokenType::Star, "*"); ++p; ++column; }
-    else if (cur == '\"') {
+    else if (cur == '=') { emit(TokenType::Eq, "="); ++p; ++column; }
+    else if (cur == '<') {
+      if (p + 1 < end && p[1] == '=') { emit(TokenType::Le, "<="); p += 2; column += 2; }
+      else if (p + 1 < end && p[1] == '>') { emit(TokenType::Ne, "<>"); p += 2; column += 2; }
+      else { emit(TokenType::Lt, "<"); ++p; ++column; }
+    } else if (cur == '>') {
+      if (p + 1 < end && p[1] == '=') { emit(TokenType::Ge, ">="); p += 2; column += 2; }
+      else { emit(TokenType::Gt, ">"); ++p; ++column; }
+    } else if (cur == '\"') {
       ++p; ++column;
       std::string value;
       while (p < end && *p != '\x22') {

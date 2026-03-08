@@ -17,6 +17,7 @@ enum class TokenType {
   // Keywords
   Select,
   From,
+  Where,
   Create,
   Table,
   Insert,
@@ -25,6 +26,17 @@ enum class TokenType {
   Int,
   Float,
   String,
+  And,
+  Or,
+  Not,
+
+  // Comparison operators
+  Eq,   // =
+  Ne,   // <>
+  Lt,   // <
+  Le,   // <=
+  Gt,   // >
+  Ge,   // >=
 
   // Punctuation
   Comma,

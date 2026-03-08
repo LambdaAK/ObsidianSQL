@@ -1,6 +1,7 @@
 #include "parser.hpp"
 #include <sstream>
 #include <cstdlib>
+#include <memory>
 
 namespace obsidian {
 
@@ -36,6 +37,16 @@ const char* token_type_name(TokenType k) {
     case TokenType::RParen: return "')'";
     case TokenType::Comma: return "','";
     case TokenType::Star: return "'*'";
+    case TokenType::Where: return "WHERE";
+    case TokenType::And: return "AND";
+    case TokenType::Or: return "OR";
+    case TokenType::Not: return "NOT";
+    case TokenType::Eq: return "'='";
+    case TokenType::Ne: return "'<>'";
+    case TokenType::Lt: return "'<'";
+    case TokenType::Le: return "'<='";
+    case TokenType::Gt: return "'>'";
+    case TokenType::Ge: return "'>='";
     case TokenType::EndOfInput: return "end of input";
     default: return "?";
   }
@@ -62,6 +73,8 @@ std::string consume_identifier(const std::vector<Token>& tokens, std::size_t& in
   return id;
 }
 
+ExprPtr parse_or_expr(const std::vector<Token>& tokens, std::size_t& index);
+
 ColumnType parse_column_type(const std::vector<Token>& tokens, std::size_t& index) {
   if (index >= tokens.size()) throw std::runtime_error("Expected type (INT, FLOAT, STRING)");
   TokenType k = tokens[index].kind;
@@ -86,6 +99,72 @@ InsertValue parse_value(const std::vector<Token>& tokens, std::size_t& index) {
     default:
       throw std::runtime_error("Expected int, float, or string literal at " + std::to_string(t.line) + ":" + std::to_string(t.column));
   }
+}
+
+ExprPtr parse_primary(const std::vector<Token>& tokens, std::size_t& index) {
+  if (index >= tokens.size()) throw std::runtime_error("Expected expression");
+  TokenType k = kind(tokens, index);
+  if (k == TokenType::LParen) {
+    ++index;
+    ExprPtr e = parse_or_expr(tokens, index);
+    expect(tokens, index, TokenType::RParen); ++index;
+    return e;
+  }
+  if (k == TokenType::Identifier) {
+    std::string col = consume_identifier(tokens, index);
+    return std::make_unique<Expr>(ColumnRefExpr{std::move(col)});
+  }
+  if (k == TokenType::IntLiteral || k == TokenType::FloatLiteral || k == TokenType::StringLiteral) {
+    InsertValue v = parse_value(tokens, index);
+    return std::make_unique<Expr>(LiteralExpr{std::move(v)});
+  }
+  throw std::runtime_error("Expected column, literal, or (expression) at " + std::to_string(tokens[index].line) + ":" + std::to_string(tokens[index].column));
+}
+
+ExprPtr parse_comparison(const std::vector<Token>& tokens, std::size_t& index) {
+  ExprPtr left = parse_primary(tokens, index);
+  if (index >= tokens.size()) return left;
+  TokenType k = kind(tokens, index);
+  Op op;
+  if (k == TokenType::Eq) op = Op::Eq;
+  else if (k == TokenType::Ne) op = Op::Ne;
+  else if (k == TokenType::Lt) op = Op::Lt;
+  else if (k == TokenType::Le) op = Op::Le;
+  else if (k == TokenType::Gt) op = Op::Gt;
+  else if (k == TokenType::Ge) op = Op::Ge;
+  else return left;
+  ++index;
+  ExprPtr right = parse_primary(tokens, index);
+  return std::make_unique<Expr>(BinaryExpr{op, std::move(left), std::move(right)});
+}
+
+ExprPtr parse_not_expr(const std::vector<Token>& tokens, std::size_t& index) {
+  if (index < tokens.size() && kind(tokens, index) == TokenType::Not) {
+    ++index;
+    ExprPtr operand = parse_not_expr(tokens, index);
+    return std::make_unique<Expr>(UnaryExpr{Op::Not, std::move(operand)});
+  }
+  return parse_comparison(tokens, index);
+}
+
+ExprPtr parse_and_expr(const std::vector<Token>& tokens, std::size_t& index) {
+  ExprPtr left = parse_not_expr(tokens, index);
+  while (index < tokens.size() && kind(tokens, index) == TokenType::And) {
+    ++index;
+    ExprPtr right = parse_not_expr(tokens, index);
+    left = std::make_unique<Expr>(BinaryExpr{Op::And, std::move(left), std::move(right)});
+  }
+  return left;
+}
+
+ExprPtr parse_or_expr(const std::vector<Token>& tokens, std::size_t& index) {
+  ExprPtr left = parse_and_expr(tokens, index);
+  while (index < tokens.size() && kind(tokens, index) == TokenType::Or) {
+    ++index;
+    ExprPtr right = parse_and_expr(tokens, index);
+    left = std::make_unique<Expr>(BinaryExpr{Op::Or, std::move(left), std::move(right)});
+  }
+  return left;
 }
 
 CreateTableStmt parse_create_table(const std::vector<Token>& tokens, std::size_t& index) {
@@ -155,6 +234,10 @@ SelectStmt parse_select(const std::vector<Token>& tokens, std::size_t& index) {
 
   expect(tokens, index, TokenType::From); ++index;
   stmt.table_name = consume_identifier(tokens, index);
+  if (index < tokens.size() && kind(tokens, index) == TokenType::Where) {
+    ++index;
+    stmt.where_clause = parse_or_expr(tokens, index);
+  }
   expect(tokens, index, TokenType::Semicolon); ++index;
   return stmt;
 }

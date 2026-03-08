@@ -1,7 +1,9 @@
 #include "execution.hpp"
+#include "ast.hpp"
 #include "colors.hpp"
 #include <iostream>
 #include <variant>
+#include <unordered_map>
 
 namespace obsidian {
 
@@ -40,6 +42,70 @@ void execute_insert(const InsertStmt& stmt, Catalog& catalog) {
   }
   table.rows.push_back(stmt.values);
   std::cout << color::green << "Inserted 1 row(s)." << color::reset << "\n" << std::flush;
+}
+
+InsertValue eval_value(const Expr& e, const Row& row,
+                      const std::unordered_map<std::string, std::size_t>& col_to_idx) {
+  return std::visit(
+    [&](const auto& x) -> InsertValue {
+      using T = std::decay_t<decltype(x)>;
+      if constexpr (std::is_same_v<T, LiteralExpr>) return x.value;
+      else if constexpr (std::is_same_v<T, ColumnRefExpr>) {
+        auto it = col_to_idx.find(x.column_name);
+        if (it == col_to_idx.end())
+          throw std::runtime_error("Column not found in WHERE: " + x.column_name);
+        return row[it->second];
+      }
+      else throw std::runtime_error("Invalid expression in WHERE (expected column or literal)");
+    },
+    e.expr
+  );
+}
+
+bool eval_bool(const Expr& e, const Row& row,
+               const std::unordered_map<std::string, std::size_t>& col_to_idx) {
+  return std::visit(
+    [&](const auto& x) -> bool {
+      using T = std::decay_t<decltype(x)>;
+      if constexpr (std::is_same_v<T, BinaryExpr>) {
+        if (x.op == Op::And) return eval_bool(*x.left, row, col_to_idx) && eval_bool(*x.right, row, col_to_idx);
+        if (x.op == Op::Or) return eval_bool(*x.left, row, col_to_idx) || eval_bool(*x.right, row, col_to_idx);
+        InsertValue a = eval_value(*x.left, row, col_to_idx);
+        InsertValue b = eval_value(*x.right, row, col_to_idx);
+        auto cmp = [&]() {
+          if (std::holds_alternative<std::int64_t>(a) && std::holds_alternative<std::int64_t>(b)) {
+            int64_t va = std::get<std::int64_t>(a), vb = std::get<std::int64_t>(b);
+            if (va < vb) return -1; if (va > vb) return 1; return 0;
+          }
+          if (std::holds_alternative<double>(a) && std::holds_alternative<double>(b)) {
+            double va = std::get<double>(a), vb = std::get<double>(b);
+            if (va < vb) return -1; if (va > vb) return 1; return 0;
+          }
+          if (std::holds_alternative<std::string>(a) && std::holds_alternative<std::string>(b)) {
+            int c = std::get<std::string>(a).compare(std::get<std::string>(b));
+            return c < 0 ? -1 : (c > 0 ? 1 : 0);
+          }
+          throw std::runtime_error("Type mismatch in WHERE comparison");
+        };
+        int c = cmp();
+        switch (x.op) {
+          case Op::Eq: return c == 0;
+          case Op::Ne: return c != 0;
+          case Op::Lt: return c < 0;
+          case Op::Le: return c <= 0;
+          case Op::Gt: return c > 0;
+          case Op::Ge: return c >= 0;
+          default: return false;
+        }
+      }
+      else if constexpr (std::is_same_v<T, UnaryExpr>) {
+        if (x.op == Op::Not) return !eval_bool(*x.operand, row, col_to_idx);
+        return false;
+      }
+      else return false;
+    },
+    e.expr
+  );
 }
 
 void print_value(const InsertValue& v) {
@@ -89,8 +155,15 @@ void execute_select(const SelectStmt& stmt, Catalog& catalog) {
   }
   std::cout << color::reset << "\n";
 
-  // Rows
+  // Build column name -> index for WHERE
+  std::unordered_map<std::string, std::size_t> col_to_idx;
+  for (std::size_t i = 0; i < table.columns.size(); ++i)
+    col_to_idx[table.columns[i].first] = i;
+
+  // Rows (filter by WHERE if present)
   for (const Row& row : table.rows) {
+    if (stmt.where_clause && !eval_bool(*stmt.where_clause.value(), row, col_to_idx))
+      continue;
     for (std::size_t i = 0; i < col_indices.size(); ++i) {
       if (i) std::cout << " | ";
       print_value(row[col_indices[i]]);
