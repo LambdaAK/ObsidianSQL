@@ -122,6 +122,43 @@ static std::string trim_right(const std::string& s) {
   return s.substr(0, i);
 }
 
+static std::string trim_left(const std::string& s) {
+  std::size_t i = 0;
+  while (i < s.size() && (s[i] == ' ' || s[i] == '\t' || s[i] == '\r' || s[i] == '\n'))
+    ++i;
+  return s.substr(i);
+}
+
+static bool handle_meta_command(const std::string& input, obsidian::Catalog& catalog) {
+  std::string trimmed = trim_right(trim_left(input));
+  if (trimmed == ".tables") {
+    if (catalog.empty()) {
+      std::cout << obsidian::color::dim << "(no tables)" << obsidian::color::reset << "\n";
+    } else {
+      for (const auto& [name, table] : catalog) {
+        std::cout << "  " << name << "\n";
+      }
+    }
+    return true;
+  }
+  if (trimmed.size() > 8 && trimmed.substr(0, 8) == ".schema ") {
+    std::string table_name = trim_left(trim_right(trimmed.substr(8)));
+    auto it = catalog.find(table_name);
+    if (it == catalog.end()) {
+      std::cerr << obsidian::color::red << "Error: " << obsidian::color::reset
+                << "Table not found: " << table_name << "\n";
+    } else {
+      const obsidian::Table& t = it->second;
+      std::cout << obsidian::color::bold << obsidian::color::cyan << t.name << obsidian::color::reset << "\n";
+      for (const auto& col : t.columns) {
+        std::cout << "  " << col.first << " " << column_type_name(col.second) << "\n";
+      }
+    }
+    return true;
+  }
+  return false;
+}
+
 void run_repl(obsidian::Catalog& catalog) {
   std::string buffer;
   for (;;) {
@@ -142,6 +179,20 @@ void run_repl(obsidian::Catalog& catalog) {
     }
     if (trimmed == "exit" || trimmed == ".exit" || trimmed == ".quit") {
       break;
+    }
+      if (trimmed == ".help" || trimmed == ".?") {
+      std::cout << obsidian::color::dim
+                << "  .tables          List all tables\n"
+                << "  .schema <name>   Show schema for a table\n"
+                << "  .exit / .quit    Exit the console\n"
+                << obsidian::color::reset;
+      buffer.clear();
+      continue;
+    }
+    if (trimmed == ".tables" || (trimmed.size() > 8 && trimmed.substr(0, 8) == ".schema ")) {
+      handle_meta_command(buffer, catalog);
+      buffer.clear();
+      continue;
     }
     if (trimmed.back() != ';') {
       continue;  // keep reading for multi-line statement
@@ -206,7 +257,7 @@ int main(int argc, char* argv[]) {
                 << "  With no file: start console (REPL). Type SQL, end with ; to run.\n"
                 << "  With file: run all statements in the file.\n"
                 << "  --tree  (with file) print AST tree instead of executing.\n"
-                << "  In console: type 'exit' or .exit to quit, Ctrl-D to exit.\n";
+                << "  Meta-commands: .tables  .schema <name>  .help  .exit\n";
       return 0;
     } else {
       path = arg;
@@ -216,7 +267,7 @@ int main(int argc, char* argv[]) {
   try {
     if (path.empty()) {
       std::cout << obsidian::color::bright_cyan << "ObsidianSQL console." << obsidian::color::reset
-                << " Type SQL statements; end with ; to execute. " << obsidian::color::dim << "'exit' to quit." << obsidian::color::reset << "\n";
+                << " Type SQL; end with ; to run. " << obsidian::color::dim << ".help for commands." << obsidian::color::reset << "\n";
       obsidian::Catalog catalog;
       run_repl(catalog);
     } else {
