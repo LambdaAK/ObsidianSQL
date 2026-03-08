@@ -38,6 +38,10 @@ const char* token_type_name(TokenType k) {
     case TokenType::Comma: return "','";
     case TokenType::Star: return "'*'";
     case TokenType::Where: return "WHERE";
+    case TokenType::Order: return "ORDER";
+    case TokenType::By: return "BY";
+    case TokenType::Asc: return "ASC";
+    case TokenType::Desc: return "DESC";
     case TokenType::And: return "AND";
     case TokenType::Or: return "OR";
     case TokenType::Not: return "NOT";
@@ -237,6 +241,23 @@ SelectStmt parse_select(const std::vector<Token>& tokens, std::size_t& index) {
   if (index < tokens.size() && kind(tokens, index) == TokenType::Where) {
     ++index;
     stmt.where_clause = parse_or_expr(tokens, index);
+  }
+  if (index < tokens.size() && kind(tokens, index) == TokenType::Order) {
+    ++index;
+    expect(tokens, index, TokenType::By); ++index;
+    if (kind(tokens, index) != TokenType::Identifier)
+      throw std::runtime_error("Expected column name after ORDER BY");
+    for (;;) {
+      std::string col = consume_identifier(tokens, index);
+      bool asc = true;
+      if (index < tokens.size()) {
+        if (kind(tokens, index) == TokenType::Asc) { asc = true; ++index; }
+        else if (kind(tokens, index) == TokenType::Desc) { asc = false; ++index; }
+      }
+      stmt.order_by.emplace_back(std::move(col), asc);
+      if (index >= tokens.size() || kind(tokens, index) != TokenType::Comma) break;
+      ++index;
+    }
   }
   expect(tokens, index, TokenType::Semicolon); ++index;
   return stmt;

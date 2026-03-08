@@ -57,12 +57,13 @@ struct InsertStmt {
   std::vector<InsertValue> values;
 };
 
-// SELECT col1, col2, ... FROM name [WHERE expr];  or  SELECT * FROM name [WHERE expr];
+// SELECT col1, col2, ... FROM name [WHERE expr] [ORDER BY col [ASC|DESC], ...];
 struct SelectStmt {
   bool select_all = false;   // true for SELECT *
   std::vector<std::string> columns;
   std::string table_name;
   std::optional<ExprPtr> where_clause;
+  std::vector<std::pair<std::string, bool>> order_by;  // (column, ascending)
 };
 
 using Statement = std::variant<CreateTableStmt, InsertStmt, SelectStmt>;

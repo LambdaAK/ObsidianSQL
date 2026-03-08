@@ -18,6 +18,10 @@ TokenType keyword_from_text(const std::string& text) {
   if (text == "SELECT") return TokenType::Select;
   if (text == "FROM") return TokenType::From;
   if (text == "WHERE") return TokenType::Where;
+  if (text == "ORDER") return TokenType::Order;
+  if (text == "BY") return TokenType::By;
+  if (text == "ASC") return TokenType::Asc;
+  if (text == "DESC") return TokenType::Desc;
   if (text == "CREATE") return TokenType::Create;
   if (text == "TABLE") return TokenType::Table;
   if (text == "INSERT") return TokenType::Insert;

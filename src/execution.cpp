@@ -4,6 +4,7 @@
 #include <iostream>
 #include <variant>
 #include <unordered_map>
+#include <algorithm>
 
 namespace obsidian {
 
@@ -155,15 +156,51 @@ void execute_select(const SelectStmt& stmt, Catalog& catalog) {
   }
   std::cout << color::reset << "\n";
 
-  // Build column name -> index for WHERE
+  // Build column name -> index for WHERE and ORDER BY
   std::unordered_map<std::string, std::size_t> col_to_idx;
   for (std::size_t i = 0; i < table.columns.size(); ++i)
     col_to_idx[table.columns[i].first] = i;
 
-  // Rows (filter by WHERE if present)
+  // Collect rows (filter by WHERE if present)
+  std::vector<Row> rows;
   for (const Row& row : table.rows) {
     if (stmt.where_clause && !eval_bool(*stmt.where_clause.value(), row, col_to_idx))
       continue;
+    rows.push_back(row);
+  }
+
+  // Sort by ORDER BY if present
+  if (!stmt.order_by.empty()) {
+    auto compare = [&](const InsertValue& a, const InsertValue& b) -> int {
+      if (std::holds_alternative<std::int64_t>(a) && std::holds_alternative<std::int64_t>(b)) {
+        int64_t va = std::get<std::int64_t>(a), vb = std::get<std::int64_t>(b);
+        if (va < vb) return -1; if (va > vb) return 1; return 0;
+      }
+      if (std::holds_alternative<double>(a) && std::holds_alternative<double>(b)) {
+        double va = std::get<double>(a), vb = std::get<double>(b);
+        if (va < vb) return -1; if (va > vb) return 1; return 0;
+      }
+      if (std::holds_alternative<std::string>(a) && std::holds_alternative<std::string>(b)) {
+        int c = std::get<std::string>(a).compare(std::get<std::string>(b));
+        return c < 0 ? -1 : (c > 0 ? 1 : 0);
+      }
+      throw std::runtime_error("Type mismatch in ORDER BY comparison");
+    };
+    std::sort(rows.begin(), rows.end(), [&](const Row& a, const Row& b) {
+      for (const auto& [col_name, asc] : stmt.order_by) {
+        auto it = col_to_idx.find(col_name);
+        if (it == col_to_idx.end())
+          throw std::runtime_error("Column not found in ORDER BY: " + col_name);
+        std::size_t idx = it->second;
+        int c = compare(a[idx], b[idx]);
+        if (c != 0) return asc ? c < 0 : c > 0;
+      }
+      return false;
+    });
+  }
+
+  // Print rows
+  for (const Row& row : rows) {
     for (std::size_t i = 0; i < col_indices.size(); ++i) {
       if (i) std::cout << " | ";
       print_value(row[col_indices[i]]);
