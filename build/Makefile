@@ -166,6 +166,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/obsidian_sql_main.dir/build.make CMakeFiles/obsidian_sql_main.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/execution.o: src/execution.cpp.o
+.PHONY : src/execution.o
+
+# target to build an object file
+src/execution.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obsidian_sql.dir/build.make CMakeFiles/obsidian_sql.dir/src/execution.cpp.o
+.PHONY : src/execution.cpp.o
+
+src/execution.i: src/execution.cpp.i
+.PHONY : src/execution.i
+
+# target to preprocess a source file
+src/execution.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obsidian_sql.dir/build.make CMakeFiles/obsidian_sql.dir/src/execution.cpp.i
+.PHONY : src/execution.cpp.i
+
+src/execution.s: src/execution.cpp.s
+.PHONY : src/execution.s
+
+# target to generate assembly for a file
+src/execution.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obsidian_sql.dir/build.make CMakeFiles/obsidian_sql.dir/src/execution.cpp.s
+.PHONY : src/execution.cpp.s
+
 src/lexer.o: src/lexer.cpp.o
 .PHONY : src/lexer.o
 
@@ -227,6 +251,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/execution.o"
+	@echo "... src/execution.i"
+	@echo "... src/execution.s"
 	@echo "... src/lexer.o"
 	@echo "... src/lexer.i"
 	@echo "... src/lexer.s"

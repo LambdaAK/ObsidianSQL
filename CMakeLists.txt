@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD 17)
 add_library(obsidian_sql
   src/lexer.cpp
   src/parser.cpp
+  src/execution.cpp
 )
 target_include_directories(obsidian_sql PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src)
 

@@ -1,2 +1,2 @@
-/usr/bin/ar qc libobsidian_sql.a CMakeFiles/obsidian_sql.dir/src/lexer.cpp.o CMakeFiles/obsidian_sql.dir/src/parser.cpp.o
+/usr/bin/ar qc libobsidian_sql.a CMakeFiles/obsidian_sql.dir/src/lexer.cpp.o CMakeFiles/obsidian_sql.dir/src/parser.cpp.o CMakeFiles/obsidian_sql.dir/src/execution.cpp.o
 /usr/bin/ranlib libobsidian_sql.a

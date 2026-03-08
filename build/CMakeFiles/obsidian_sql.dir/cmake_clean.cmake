@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/obsidian_sql.dir/src/execution.cpp.o"
+  "CMakeFiles/obsidian_sql.dir/src/execution.cpp.o.d"
   "CMakeFiles/obsidian_sql.dir/src/lexer.cpp.o"
   "CMakeFiles/obsidian_sql.dir/src/lexer.cpp.o.d"
   "CMakeFiles/obsidian_sql.dir/src/parser.cpp.o"

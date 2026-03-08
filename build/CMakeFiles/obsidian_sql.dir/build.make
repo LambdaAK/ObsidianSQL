@@ -100,19 +100,35 @@ CMakeFiles/obsidian_sql.dir/src/parser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/obsidian_sql.dir/src/parser.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/alex/Desktop/ObsidianSQL/src/parser.cpp -o CMakeFiles/obsidian_sql.dir/src/parser.cpp.s
 
+CMakeFiles/obsidian_sql.dir/src/execution.cpp.o: CMakeFiles/obsidian_sql.dir/flags.make
+CMakeFiles/obsidian_sql.dir/src/execution.cpp.o: /Users/alex/Desktop/ObsidianSQL/src/execution.cpp
+CMakeFiles/obsidian_sql.dir/src/execution.cpp.o: CMakeFiles/obsidian_sql.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/alex/Desktop/ObsidianSQL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/obsidian_sql.dir/src/execution.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/obsidian_sql.dir/src/execution.cpp.o -MF CMakeFiles/obsidian_sql.dir/src/execution.cpp.o.d -o CMakeFiles/obsidian_sql.dir/src/execution.cpp.o -c /Users/alex/Desktop/ObsidianSQL/src/execution.cpp
+
+CMakeFiles/obsidian_sql.dir/src/execution.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/obsidian_sql.dir/src/execution.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/alex/Desktop/ObsidianSQL/src/execution.cpp > CMakeFiles/obsidian_sql.dir/src/execution.cpp.i
+
+CMakeFiles/obsidian_sql.dir/src/execution.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/obsidian_sql.dir/src/execution.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/alex/Desktop/ObsidianSQL/src/execution.cpp -o CMakeFiles/obsidian_sql.dir/src/execution.cpp.s
+
 # Object files for target obsidian_sql
 obsidian_sql_OBJECTS = \
 "CMakeFiles/obsidian_sql.dir/src/lexer.cpp.o" \
-"CMakeFiles/obsidian_sql.dir/src/parser.cpp.o"
+"CMakeFiles/obsidian_sql.dir/src/parser.cpp.o" \
+"CMakeFiles/obsidian_sql.dir/src/execution.cpp.o"
 
 # External object files for target obsidian_sql
 obsidian_sql_EXTERNAL_OBJECTS =
 
 libobsidian_sql.a: CMakeFiles/obsidian_sql.dir/src/lexer.cpp.o
 libobsidian_sql.a: CMakeFiles/obsidian_sql.dir/src/parser.cpp.o
+libobsidian_sql.a: CMakeFiles/obsidian_sql.dir/src/execution.cpp.o
 libobsidian_sql.a: CMakeFiles/obsidian_sql.dir/build.make
 libobsidian_sql.a: CMakeFiles/obsidian_sql.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/alex/Desktop/ObsidianSQL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libobsidian_sql.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/alex/Desktop/ObsidianSQL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libobsidian_sql.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/obsidian_sql.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/obsidian_sql.dir/link.txt --verbose=$(VERBOSE)
 

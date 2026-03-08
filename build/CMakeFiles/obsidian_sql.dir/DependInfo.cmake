@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/alex/Desktop/ObsidianSQL/src/execution.cpp" "CMakeFiles/obsidian_sql.dir/src/execution.cpp.o" "gcc" "CMakeFiles/obsidian_sql.dir/src/execution.cpp.o.d"
   "/Users/alex/Desktop/ObsidianSQL/src/lexer.cpp" "CMakeFiles/obsidian_sql.dir/src/lexer.cpp.o" "gcc" "CMakeFiles/obsidian_sql.dir/src/lexer.cpp.o.d"
   "/Users/alex/Desktop/ObsidianSQL/src/parser.cpp" "CMakeFiles/obsidian_sql.dir/src/parser.cpp.o" "gcc" "CMakeFiles/obsidian_sql.dir/src/parser.cpp.o.d"
   )

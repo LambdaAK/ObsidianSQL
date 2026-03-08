@@ -1,6 +1,8 @@
 #include "lexer.hpp"
 #include "parser.hpp"
 #include "ast.hpp"
+#include "execution.hpp"
+#include "catalog.hpp"
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -112,14 +114,82 @@ std::string read_file(const std::string& path) {
   return buf.str();
 }
 
-std::string read_stdin() {
-  std::string input;
-  std::string line;
-  while (std::getline(std::cin, line)) {
-    input += line;
-    input += '\n';
+static std::string trim_right(const std::string& s) {
+  std::size_t i = s.size();
+  while (i > 0 && (s[i - 1] == ' ' || s[i - 1] == '\t' || s[i - 1] == '\r' || s[i - 1] == '\n'))
+    --i;
+  return s.substr(0, i);
+}
+
+void run_repl(obsidian::Catalog& catalog) {
+  const char* prompt = "obsidian> ";
+  std::string buffer;
+  for (;;) {
+    std::cout << prompt;
+    std::cout.flush();
+    std::string line;
+    if (!std::getline(std::cin, line)) {
+      std::cout << "\n";
+      break;  // EOF (Ctrl-D)
+    }
+    buffer += line;
+    buffer += '\n';
+
+    std::string trimmed = trim_right(buffer);
+    if (trimmed.empty()) {
+      buffer.clear();
+      continue;
+    }
+    if (trimmed == "exit" || trimmed == ".exit" || trimmed == ".quit") {
+      break;
+    }
+    if (trimmed.back() != ';') {
+      continue;  // keep reading for multi-line statement
+    }
+
+    try {
+      auto tokens = obsidian::lex(buffer);
+      std::size_t index = 0;
+      int executed = 0;
+      while (index < tokens.size() && tokens[index].kind != obsidian::TokenType::EndOfInput) {
+        obsidian::Statement stmt = obsidian::parse_statement(tokens, index);
+        obsidian::execute(stmt, catalog);
+        ++executed;
+      }
+      if (executed == 0 && !tokens.empty() && tokens[0].kind != obsidian::TokenType::EndOfInput) {
+        std::cerr << "Error: no complete statement (missing ';'?)\n";
+      }
+    } catch (const std::exception& e) {
+      std::cerr << "Error: " << e.what() << '\n';
+    }
+    buffer.clear();
   }
-  return input;
+}
+
+void run_batch(const std::string& input, bool tree_view) {
+  auto tokens = obsidian::lex(input);
+  if (tokens.empty() || (tokens.size() == 1 && tokens[0].kind == obsidian::TokenType::EndOfInput)) {
+    std::cout << "No statements.\n";
+    return;
+  }
+  obsidian::Catalog catalog;
+  std::size_t index = 0;
+  int stmt_num = 0;
+  while (index < tokens.size() && tokens[index].kind != obsidian::TokenType::EndOfInput) {
+    obsidian::Statement stmt = obsidian::parse_statement(tokens, index);
+    if (tree_view) {
+      if (stmt_num) std::cout << "\n";
+      std::cout << "--- Statement " << (stmt_num + 1) << " ---\n";
+      print_ast_tree(stmt);
+      std::cout << "\n";
+    } else {
+      obsidian::execute(stmt, catalog);
+    }
+    ++stmt_num;
+  }
+  if (!tree_view && stmt_num > 0) {
+    std::cout << "(" << stmt_num << " statement(s) executed)\n";
+  }
 }
 
 }  // namespace
@@ -133,49 +203,24 @@ int main(int argc, char* argv[]) {
       tree_view = true;
     } else if (arg == "--help" || arg == "-h") {
       std::cout << "Usage: " << (argv[0] ? argv[0] : "obsidian_sql_main") << " [--tree|-t] [file.sql]\n"
-                << "  If file.sql is given, parse that file; otherwise read from stdin.\n"
-                << "  --tree  Print AST as an indented tree instead of one-line summary.\n";
+                << "  With no file: start console (REPL). Type SQL, end with ; to run.\n"
+                << "  With file: run all statements in the file.\n"
+                << "  --tree  (with file) print AST tree instead of executing.\n"
+                << "  In console: type 'exit' or .exit to quit, Ctrl-D to exit.\n";
       return 0;
     } else {
       path = arg;
     }
   }
 
-  std::string input;
-  if (path.empty()) {
-    std::cout << "ObsidianSQL (lex + parse). Enter statements, then Ctrl-D to run.\n";
-    input = read_stdin();
-  } else {
-    input = read_file(path);
-  }
-  if (input.empty()) {
-    std::cout << "No input.\n";
-    return 0;
-  }
-
   try {
-    auto tokens = obsidian::lex(input);
-    if (tokens.empty() || (tokens.size() == 1 && tokens[0].kind == obsidian::TokenType::EndOfInput)) {
-      std::cout << "No statements (only whitespace or empty).\n";
-      return 0;
-    }
-    std::size_t index = 0;
-    int stmt_num = 0;
-    while (index < tokens.size() && tokens[index].kind != obsidian::TokenType::EndOfInput) {
-      obsidian::Statement stmt = obsidian::parse_statement(tokens, index);
-      if (tree_view) {
-        if (stmt_num) std::cout << "\n";
-        std::cout << "--- Statement " << (stmt_num + 1) << " ---\n";
-        print_ast_tree(stmt);
-        std::cout << "\n";
-      } else {
-        std::cout << "Parsed: ";
-        print_ast_oneline(stmt);
-      }
-      ++stmt_num;
-    }
-    if (!tree_view && stmt_num > 0) {
-      std::cout << "(" << stmt_num << " statement(s) parsed successfully)\n";
+    if (path.empty()) {
+      std::cout << "ObsidianSQL console. Type SQL statements; end with ; to execute. 'exit' to quit.\n";
+      obsidian::Catalog catalog;
+      run_repl(catalog);
+    } else {
+      std::string input = read_file(path);
+      run_batch(input, tree_view);
     }
   } catch (const std::exception& e) {
     std::cerr << "Error: " << e.what() << '\n';
