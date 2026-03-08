@@ -960,6 +960,7 @@ CMakeFiles/obsidian_sql.dir/src/execution.cpp.o: /Users/alex/Desktop/ObsidianSQL
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/xlocale/_wctype.h \
   /Users/alex/Desktop/ObsidianSQL/src/ast.hpp \
   /Users/alex/Desktop/ObsidianSQL/src/catalog.hpp \
+  /Users/alex/Desktop/ObsidianSQL/src/colors.hpp \
   /Users/alex/Desktop/ObsidianSQL/src/execution.hpp
 
 CMakeFiles/obsidian_sql.dir/src/lexer.cpp.o: /Users/alex/Desktop/ObsidianSQL/src/lexer.cpp \
@@ -3091,6 +3092,8 @@ CMakeFiles/obsidian_sql.dir/src/parser.cpp.o: /Users/alex/Desktop/ObsidianSQL/sr
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/remove_const.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/nat.h:
+
+/Users/alex/Desktop/ObsidianSQL/src/colors.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_unsigned_integer.h:
 

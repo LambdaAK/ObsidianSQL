@@ -1,4 +1,5 @@
 #include "execution.hpp"
+#include "colors.hpp"
 #include <iostream>
 #include <variant>
 
@@ -22,7 +23,7 @@ void execute_create_table(const CreateTableStmt& stmt, Catalog& catalog) {
   table.name = stmt.table_name;
   table.columns = stmt.columns;
   catalog[stmt.table_name] = std::move(table);
-  std::cout << "Created table " << stmt.table_name << ".\n" << std::flush;
+  std::cout << color::green << "Created table " << stmt.table_name << "." << color::reset << "\n" << std::flush;
 }
 
 void execute_insert(const InsertStmt& stmt, Catalog& catalog) {
@@ -38,7 +39,7 @@ void execute_insert(const InsertStmt& stmt, Catalog& catalog) {
       throw std::runtime_error("Type mismatch for column " + table.columns[i].first);
   }
   table.rows.push_back(stmt.values);
-  std::cout << "Inserted 1 row(s).\n" << std::flush;
+  std::cout << color::green << "Inserted 1 row(s)." << color::reset << "\n" << std::flush;
 }
 
 void print_value(const InsertValue& v) {
@@ -76,16 +77,17 @@ void execute_select(const SelectStmt& stmt, Catalog& catalog) {
   }
 
   // Header
+  std::cout << color::bold << color::cyan;
   for (std::size_t i = 0; i < col_indices.size(); ++i) {
     if (i) std::cout << " | ";
     std::cout << table.columns[col_indices[i]].first;
   }
-  std::cout << "\n";
+  std::cout << color::reset << "\n" << color::dim;
   for (std::size_t i = 0; i < col_indices.size(); ++i) {
     if (i) std::cout << "-+-";
     std::cout << "---";
   }
-  std::cout << "\n";
+  std::cout << color::reset << "\n";
 
   // Rows
   for (const Row& row : table.rows) {

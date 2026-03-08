@@ -3,6 +3,7 @@
 #include "ast.hpp"
 #include "execution.hpp"
 #include "catalog.hpp"
+#include "colors.hpp"
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -122,10 +123,9 @@ static std::string trim_right(const std::string& s) {
 }
 
 void run_repl(obsidian::Catalog& catalog) {
-  const char* prompt = "obsidian> ";
   std::string buffer;
   for (;;) {
-    std::cout << prompt;
+    std::cout << obsidian::color::cyan << "obsidian> " << obsidian::color::reset;
     std::cout.flush();
     std::string line;
     if (!std::getline(std::cin, line)) {
@@ -160,7 +160,7 @@ void run_repl(obsidian::Catalog& catalog) {
         std::cerr << "Error: no complete statement (missing ';'?)\n";
       }
     } catch (const std::exception& e) {
-      std::cerr << "Error: " << e.what() << '\n';
+      std::cerr << obsidian::color::red << "Error: " << obsidian::color::reset << e.what() << '\n';
     }
     buffer.clear();
   }
@@ -188,7 +188,7 @@ void run_batch(const std::string& input, bool tree_view) {
     ++stmt_num;
   }
   if (!tree_view && stmt_num > 0) {
-    std::cout << "(" << stmt_num << " statement(s) executed)\n";
+    std::cout << obsidian::color::dim << "(" << stmt_num << " statement(s) executed)" << obsidian::color::reset << "\n";
   }
 }
 
@@ -215,7 +215,8 @@ int main(int argc, char* argv[]) {
 
   try {
     if (path.empty()) {
-      std::cout << "ObsidianSQL console. Type SQL statements; end with ; to execute. 'exit' to quit.\n";
+      std::cout << obsidian::color::bright_cyan << "ObsidianSQL console." << obsidian::color::reset
+                << " Type SQL statements; end with ; to execute. " << obsidian::color::dim << "'exit' to quit." << obsidian::color::reset << "\n";
       obsidian::Catalog catalog;
       run_repl(catalog);
     } else {
@@ -223,7 +224,7 @@ int main(int argc, char* argv[]) {
       run_batch(input, tree_view);
     }
   } catch (const std::exception& e) {
-    std::cerr << "Error: " << e.what() << '\n';
+    std::cerr << obsidian::color::red << "Error: " << obsidian::color::reset << e.what() << '\n';
     return 1;
   }
 
