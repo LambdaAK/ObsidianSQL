@@ -1,0 +1,1851 @@
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake:12 (find_program)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_UNAME"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "uname"
+    candidate_directories:
+      - "/Users/alex/.opam/cs3110-2025sp/bin/"
+      - "/opt/homebrew/opt/binutils/bin/"
+      - "/Users/alex/.pyenv/shims/"
+      - "/Users/alex/.cabal/bin/"
+      - "/Users/alex/.ghcup/bin/"
+      - "/Users/alex/.nvm/versions/node/v18.20.2/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/usr/local/mysql/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Library/TeX/texbin/"
+      - "/Users/alex/.cargo/bin/"
+      - "/Users/alex/Library/Application Support/Coursier/bin/"
+    searched_directories:
+      - "/Users/alex/.opam/cs3110-2025sp/bin/uname"
+      - "/opt/homebrew/opt/binutils/bin/uname"
+      - "/Users/alex/.pyenv/shims/uname"
+      - "/Users/alex/.cabal/bin/uname"
+      - "/Users/alex/.ghcup/bin/uname"
+      - "/Users/alex/.nvm/versions/node/v18.20.2/bin/uname"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/uname"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/uname"
+      - "/opt/homebrew/bin/uname"
+      - "/opt/homebrew/sbin/uname"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/uname"
+      - "/usr/local/mysql/bin/uname"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/uname"
+      - "/usr/local/bin/uname"
+      - "/System/Cryptexes/App/usr/bin/uname"
+    found: "/usr/bin/uname"
+    search_context:
+      ENV{PATH}:
+        - "/Users/alex/.opam/cs3110-2025sp/bin"
+        - "/opt/homebrew/opt/binutils/bin"
+        - "/Users/alex/.pyenv/shims"
+        - "/Users/alex/.cabal/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.nvm/versions/node/v18.20.2/bin"
+        - "/Users/alex/.pyenv/shims"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/usr/local/mysql/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Library/TeX/texbin"
+        - "/Users/alex/.opam/cs3110-2025sp/bin"
+        - "/opt/homebrew/opt/binutils/bin"
+        - "/Users/alex/.cabal/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.nvm/versions/node/v18.20.2/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/Users/alex/.cargo/bin"
+        - "/Users/alex/Library/Application Support/Coursier/bin"
+        - "/Users/alex/Library/Application Support/Coursier/bin"
+        - "/usr/local/bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake:212 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Darwin - 24.0.0 - arm64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeUnixFindMake.cmake:5 (find_program)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_MAKE_PROGRAM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gmake"
+      - "make"
+      - "smake"
+    candidate_directories:
+      - "/Users/alex/.opam/cs3110-2025sp/bin/"
+      - "/opt/homebrew/opt/binutils/bin/"
+      - "/Users/alex/.pyenv/shims/"
+      - "/Users/alex/.cabal/bin/"
+      - "/Users/alex/.ghcup/bin/"
+      - "/Users/alex/.nvm/versions/node/v18.20.2/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/usr/local/mysql/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Library/TeX/texbin/"
+      - "/Users/alex/.cargo/bin/"
+      - "/Users/alex/Library/Application Support/Coursier/bin/"
+    searched_directories:
+      - "/Users/alex/.opam/cs3110-2025sp/bin/gmake"
+      - "/opt/homebrew/opt/binutils/bin/gmake"
+      - "/Users/alex/.pyenv/shims/gmake"
+      - "/Users/alex/.cabal/bin/gmake"
+      - "/Users/alex/.ghcup/bin/gmake"
+      - "/Users/alex/.nvm/versions/node/v18.20.2/bin/gmake"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/gmake"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/gmake"
+      - "/opt/homebrew/bin/gmake"
+      - "/opt/homebrew/sbin/gmake"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/gmake"
+      - "/usr/local/mysql/bin/gmake"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/gmake"
+      - "/usr/local/bin/gmake"
+      - "/System/Cryptexes/App/usr/bin/gmake"
+      - "/usr/bin/gmake"
+      - "/bin/gmake"
+      - "/usr/sbin/gmake"
+      - "/sbin/gmake"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/gmake"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/gmake"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/gmake"
+      - "/Library/Apple/usr/bin/gmake"
+      - "/Library/TeX/texbin/gmake"
+      - "/Users/alex/.cargo/bin/gmake"
+      - "/Users/alex/Library/Application Support/Coursier/bin/gmake"
+      - "/Users/alex/.opam/cs3110-2025sp/bin/make"
+      - "/opt/homebrew/opt/binutils/bin/make"
+      - "/Users/alex/.pyenv/shims/make"
+      - "/Users/alex/.cabal/bin/make"
+      - "/Users/alex/.ghcup/bin/make"
+      - "/Users/alex/.nvm/versions/node/v18.20.2/bin/make"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/make"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/make"
+      - "/opt/homebrew/bin/make"
+      - "/opt/homebrew/sbin/make"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/make"
+      - "/usr/local/mysql/bin/make"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/make"
+      - "/usr/local/bin/make"
+      - "/System/Cryptexes/App/usr/bin/make"
+    found: "/usr/bin/make"
+    search_context:
+      ENV{PATH}:
+        - "/Users/alex/.opam/cs3110-2025sp/bin"
+        - "/opt/homebrew/opt/binutils/bin"
+        - "/Users/alex/.pyenv/shims"
+        - "/Users/alex/.cabal/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.nvm/versions/node/v18.20.2/bin"
+        - "/Users/alex/.pyenv/shims"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/usr/local/mysql/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Library/TeX/texbin"
+        - "/Users/alex/.opam/cs3110-2025sp/bin"
+        - "/opt/homebrew/opt/binutils/bin"
+        - "/Users/alex/.cabal/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.nvm/versions/node/v18.20.2/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/Users/alex/.cargo/bin"
+        - "/Users/alex/Library/Application Support/Coursier/bin"
+        - "/Users/alex/Library/Application Support/Coursier/bin"
+        - "/usr/local/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompiler.cmake:73 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:69 (_cmake_find_compiler)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER"
+    description: "CXX compiler"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "c++"
+      - "g++"
+      - "cl"
+      - "bcc"
+      - "icpx"
+      - "icx"
+      - "clang++"
+    candidate_directories:
+      - "/Users/alex/.opam/cs3110-2025sp/bin/"
+      - "/opt/homebrew/opt/binutils/bin/"
+      - "/Users/alex/.pyenv/shims/"
+      - "/Users/alex/.cabal/bin/"
+      - "/Users/alex/.ghcup/bin/"
+      - "/Users/alex/.nvm/versions/node/v18.20.2/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/usr/local/mysql/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Library/TeX/texbin/"
+      - "/Users/alex/.cargo/bin/"
+      - "/Users/alex/Library/Application Support/Coursier/bin/"
+    searched_directories:
+      - "/Users/alex/.opam/cs3110-2025sp/bin/c++"
+      - "/opt/homebrew/opt/binutils/bin/c++"
+      - "/Users/alex/.pyenv/shims/c++"
+      - "/Users/alex/.cabal/bin/c++"
+      - "/Users/alex/.ghcup/bin/c++"
+      - "/Users/alex/.nvm/versions/node/v18.20.2/bin/c++"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/c++"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/c++"
+      - "/opt/homebrew/bin/c++"
+      - "/opt/homebrew/sbin/c++"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/c++"
+      - "/usr/local/mysql/bin/c++"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/c++"
+      - "/usr/local/bin/c++"
+      - "/System/Cryptexes/App/usr/bin/c++"
+    found: "/usr/bin/c++"
+    search_context:
+      ENV{PATH}:
+        - "/Users/alex/.opam/cs3110-2025sp/bin"
+        - "/opt/homebrew/opt/binutils/bin"
+        - "/Users/alex/.pyenv/shims"
+        - "/Users/alex/.cabal/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.nvm/versions/node/v18.20.2/bin"
+        - "/Users/alex/.pyenv/shims"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/usr/local/mysql/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Library/TeX/texbin"
+        - "/Users/alex/.opam/cs3110-2025sp/bin"
+        - "/opt/homebrew/opt/binutils/bin"
+        - "/Users/alex/.cabal/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.nvm/versions/node/v18.20.2/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/Users/alex/.cargo/bin"
+        - "/Users/alex/Library/Application Support/Coursier/bin"
+        - "/Users/alex/Library/Application Support/Coursier/bin"
+        - "/usr/local/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "/opt/homebrew/share/cmake/Modules/"
+    found: "/opt/homebrew/share/cmake/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "/Users/alex/.opam/cs3110-2025sp/bin"
+        - "/opt/homebrew/opt/binutils/bin"
+        - "/Users/alex/.pyenv/shims"
+        - "/Users/alex/.cabal/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.nvm/versions/node/v18.20.2/bin"
+        - "/Users/alex/.pyenv/shims"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/usr/local/mysql/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Library/TeX/texbin"
+        - "/Users/alex/.opam/cs3110-2025sp/bin"
+        - "/opt/homebrew/opt/binutils/bin"
+        - "/Users/alex/.cabal/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.nvm/versions/node/v18.20.2/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/Users/alex/.cargo/bin"
+        - "/Users/alex/Library/Application Support/Coursier/bin"
+        - "/Users/alex/Library/Application Support/Coursier/bin"
+        - "/usr/local/bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/bin/c++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is AppleClang, found in:
+        /Users/alex/Desktop/ObsidianSQL/build/CMakeFiles/4.2.3/CompilerIdCXX/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:290 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Detecting CXX compiler apple sysroot: "/usr/bin/c++" "-E" "apple-sdk.cpp"
+        # 1 "apple-sdk.cpp"
+        # 1 "<built-in>" 1
+        # 1 "<built-in>" 3
+        # 439 "<built-in>" 3
+        # 1 "<command line>" 1
+        # 1 "<built-in>" 2
+        # 1 "apple-sdk.cpp" 2
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 1 3 4
+        # 86 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 87 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 206 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 1 3 4
+        # 177 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 1 3 4
+        # 178 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 2 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h" 1 3 4
+        # 179 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 2 3 4
+        # 207 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 2 "apple-sdk.cpp" 2
+        
+        
+      Found apple sysroot: /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_AR"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ar"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/Users/alex/.opam/cs3110-2025sp/bin/"
+      - "/opt/homebrew/opt/binutils/bin/"
+      - "/Users/alex/.pyenv/shims/"
+      - "/Users/alex/.cabal/bin/"
+      - "/Users/alex/.ghcup/bin/"
+      - "/Users/alex/.nvm/versions/node/v18.20.2/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/usr/local/mysql/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Library/TeX/texbin/"
+      - "/Users/alex/.cargo/bin/"
+      - "/Users/alex/Library/Application Support/Coursier/bin/"
+    found: "/usr/bin/ar"
+    search_context:
+      ENV{PATH}:
+        - "/Users/alex/.opam/cs3110-2025sp/bin"
+        - "/opt/homebrew/opt/binutils/bin"
+        - "/Users/alex/.pyenv/shims"
+        - "/Users/alex/.cabal/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.nvm/versions/node/v18.20.2/bin"
+        - "/Users/alex/.pyenv/shims"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/usr/local/mysql/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Library/TeX/texbin"
+        - "/Users/alex/.opam/cs3110-2025sp/bin"
+        - "/opt/homebrew/opt/binutils/bin"
+        - "/Users/alex/.cabal/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.nvm/versions/node/v18.20.2/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/Users/alex/.cargo/bin"
+        - "/Users/alex/Library/Application Support/Coursier/bin"
+        - "/Users/alex/Library/Application Support/Coursier/bin"
+        - "/usr/local/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_RANLIB"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ranlib"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/Users/alex/.opam/cs3110-2025sp/bin/"
+      - "/opt/homebrew/opt/binutils/bin/"
+      - "/Users/alex/.pyenv/shims/"
+      - "/Users/alex/.cabal/bin/"
+      - "/Users/alex/.ghcup/bin/"
+      - "/Users/alex/.nvm/versions/node/v18.20.2/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/usr/local/mysql/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Library/TeX/texbin/"
+      - "/Users/alex/.cargo/bin/"
+      - "/Users/alex/Library/Application Support/Coursier/bin/"
+    found: "/usr/bin/ranlib"
+    search_context:
+      ENV{PATH}:
+        - "/Users/alex/.opam/cs3110-2025sp/bin"
+        - "/opt/homebrew/opt/binutils/bin"
+        - "/Users/alex/.pyenv/shims"
+        - "/Users/alex/.cabal/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.nvm/versions/node/v18.20.2/bin"
+        - "/Users/alex/.pyenv/shims"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/usr/local/mysql/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Library/TeX/texbin"
+        - "/Users/alex/.opam/cs3110-2025sp/bin"
+        - "/opt/homebrew/opt/binutils/bin"
+        - "/Users/alex/.cabal/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.nvm/versions/node/v18.20.2/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/Users/alex/.cargo/bin"
+        - "/Users/alex/Library/Application Support/Coursier/bin"
+        - "/Users/alex/Library/Application Support/Coursier/bin"
+        - "/usr/local/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_STRIP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "strip"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/Users/alex/.opam/cs3110-2025sp/bin/"
+      - "/opt/homebrew/opt/binutils/bin/"
+      - "/Users/alex/.pyenv/shims/"
+      - "/Users/alex/.cabal/bin/"
+      - "/Users/alex/.ghcup/bin/"
+      - "/Users/alex/.nvm/versions/node/v18.20.2/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/usr/local/mysql/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Library/TeX/texbin/"
+      - "/Users/alex/.cargo/bin/"
+      - "/Users/alex/Library/Application Support/Coursier/bin/"
+    found: "/usr/bin/strip"
+    search_context:
+      ENV{PATH}:
+        - "/Users/alex/.opam/cs3110-2025sp/bin"
+        - "/opt/homebrew/opt/binutils/bin"
+        - "/Users/alex/.pyenv/shims"
+        - "/Users/alex/.cabal/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.nvm/versions/node/v18.20.2/bin"
+        - "/Users/alex/.pyenv/shims"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/usr/local/mysql/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Library/TeX/texbin"
+        - "/Users/alex/.opam/cs3110-2025sp/bin"
+        - "/opt/homebrew/opt/binutils/bin"
+        - "/Users/alex/.cabal/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.nvm/versions/node/v18.20.2/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/Users/alex/.cargo/bin"
+        - "/Users/alex/Library/Application Support/Coursier/bin"
+        - "/Users/alex/Library/Application Support/Coursier/bin"
+        - "/usr/local/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_LINKER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ld"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/Users/alex/.opam/cs3110-2025sp/bin/"
+      - "/opt/homebrew/opt/binutils/bin/"
+      - "/Users/alex/.pyenv/shims/"
+      - "/Users/alex/.cabal/bin/"
+      - "/Users/alex/.ghcup/bin/"
+      - "/Users/alex/.nvm/versions/node/v18.20.2/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/usr/local/mysql/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Library/TeX/texbin/"
+      - "/Users/alex/.cargo/bin/"
+      - "/Users/alex/Library/Application Support/Coursier/bin/"
+    found: "/usr/bin/ld"
+    search_context:
+      ENV{PATH}:
+        - "/Users/alex/.opam/cs3110-2025sp/bin"
+        - "/opt/homebrew/opt/binutils/bin"
+        - "/Users/alex/.pyenv/shims"
+        - "/Users/alex/.cabal/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.nvm/versions/node/v18.20.2/bin"
+        - "/Users/alex/.pyenv/shims"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/usr/local/mysql/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Library/TeX/texbin"
+        - "/Users/alex/.opam/cs3110-2025sp/bin"
+        - "/opt/homebrew/opt/binutils/bin"
+        - "/Users/alex/.cabal/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.nvm/versions/node/v18.20.2/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/Users/alex/.cargo/bin"
+        - "/Users/alex/Library/Application Support/Coursier/bin"
+        - "/Users/alex/Library/Application Support/Coursier/bin"
+        - "/usr/local/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_NM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "nm"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/Users/alex/.opam/cs3110-2025sp/bin/"
+      - "/opt/homebrew/opt/binutils/bin/"
+      - "/Users/alex/.pyenv/shims/"
+      - "/Users/alex/.cabal/bin/"
+      - "/Users/alex/.ghcup/bin/"
+      - "/Users/alex/.nvm/versions/node/v18.20.2/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/usr/local/mysql/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Library/TeX/texbin/"
+      - "/Users/alex/.cargo/bin/"
+      - "/Users/alex/Library/Application Support/Coursier/bin/"
+    found: "/usr/bin/nm"
+    search_context:
+      ENV{PATH}:
+        - "/Users/alex/.opam/cs3110-2025sp/bin"
+        - "/opt/homebrew/opt/binutils/bin"
+        - "/Users/alex/.pyenv/shims"
+        - "/Users/alex/.cabal/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.nvm/versions/node/v18.20.2/bin"
+        - "/Users/alex/.pyenv/shims"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/usr/local/mysql/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Library/TeX/texbin"
+        - "/Users/alex/.opam/cs3110-2025sp/bin"
+        - "/opt/homebrew/opt/binutils/bin"
+        - "/Users/alex/.cabal/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.nvm/versions/node/v18.20.2/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/Users/alex/.cargo/bin"
+        - "/Users/alex/Library/Application Support/Coursier/bin"
+        - "/Users/alex/Library/Application Support/Coursier/bin"
+        - "/usr/local/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJDUMP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "objdump"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/Users/alex/.opam/cs3110-2025sp/bin/"
+      - "/opt/homebrew/opt/binutils/bin/"
+      - "/Users/alex/.pyenv/shims/"
+      - "/Users/alex/.cabal/bin/"
+      - "/Users/alex/.ghcup/bin/"
+      - "/Users/alex/.nvm/versions/node/v18.20.2/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/usr/local/mysql/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Library/TeX/texbin/"
+      - "/Users/alex/.cargo/bin/"
+      - "/Users/alex/Library/Application Support/Coursier/bin/"
+    found: "/usr/bin/objdump"
+    search_context:
+      ENV{PATH}:
+        - "/Users/alex/.opam/cs3110-2025sp/bin"
+        - "/opt/homebrew/opt/binutils/bin"
+        - "/Users/alex/.pyenv/shims"
+        - "/Users/alex/.cabal/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.nvm/versions/node/v18.20.2/bin"
+        - "/Users/alex/.pyenv/shims"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/usr/local/mysql/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Library/TeX/texbin"
+        - "/Users/alex/.opam/cs3110-2025sp/bin"
+        - "/opt/homebrew/opt/binutils/bin"
+        - "/Users/alex/.cabal/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.nvm/versions/node/v18.20.2/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/Users/alex/.cargo/bin"
+        - "/Users/alex/Library/Application Support/Coursier/bin"
+        - "/Users/alex/Library/Application Support/Coursier/bin"
+        - "/usr/local/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJCOPY"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "objcopy"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/Users/alex/.opam/cs3110-2025sp/bin/"
+      - "/opt/homebrew/opt/binutils/bin/"
+      - "/Users/alex/.pyenv/shims/"
+      - "/Users/alex/.cabal/bin/"
+      - "/Users/alex/.ghcup/bin/"
+      - "/Users/alex/.nvm/versions/node/v18.20.2/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/usr/local/mysql/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Library/TeX/texbin/"
+      - "/Users/alex/.cargo/bin/"
+      - "/Users/alex/Library/Application Support/Coursier/bin/"
+    searched_directories:
+      - "/usr/bin/objcopy"
+      - "/Users/alex/.opam/cs3110-2025sp/bin/objcopy"
+      - "/opt/homebrew/opt/binutils/bin/objcopy"
+      - "/Users/alex/.pyenv/shims/objcopy"
+      - "/Users/alex/.cabal/bin/objcopy"
+      - "/Users/alex/.ghcup/bin/objcopy"
+      - "/Users/alex/.nvm/versions/node/v18.20.2/bin/objcopy"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/objcopy"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/objcopy"
+      - "/opt/homebrew/bin/objcopy"
+      - "/opt/homebrew/sbin/objcopy"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/objcopy"
+      - "/usr/local/mysql/bin/objcopy"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/objcopy"
+      - "/usr/local/bin/objcopy"
+      - "/System/Cryptexes/App/usr/bin/objcopy"
+      - "/bin/objcopy"
+      - "/usr/sbin/objcopy"
+      - "/sbin/objcopy"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/objcopy"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/objcopy"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/objcopy"
+      - "/Library/Apple/usr/bin/objcopy"
+      - "/Library/TeX/texbin/objcopy"
+      - "/Users/alex/.cargo/bin/objcopy"
+      - "/Users/alex/Library/Application Support/Coursier/bin/objcopy"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/Users/alex/.opam/cs3110-2025sp/bin"
+        - "/opt/homebrew/opt/binutils/bin"
+        - "/Users/alex/.pyenv/shims"
+        - "/Users/alex/.cabal/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.nvm/versions/node/v18.20.2/bin"
+        - "/Users/alex/.pyenv/shims"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/usr/local/mysql/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Library/TeX/texbin"
+        - "/Users/alex/.opam/cs3110-2025sp/bin"
+        - "/opt/homebrew/opt/binutils/bin"
+        - "/Users/alex/.cabal/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.nvm/versions/node/v18.20.2/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/Users/alex/.cargo/bin"
+        - "/Users/alex/Library/Application Support/Coursier/bin"
+        - "/Users/alex/Library/Application Support/Coursier/bin"
+        - "/usr/local/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_READELF"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "readelf"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/Users/alex/.opam/cs3110-2025sp/bin/"
+      - "/opt/homebrew/opt/binutils/bin/"
+      - "/Users/alex/.pyenv/shims/"
+      - "/Users/alex/.cabal/bin/"
+      - "/Users/alex/.ghcup/bin/"
+      - "/Users/alex/.nvm/versions/node/v18.20.2/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/usr/local/mysql/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Library/TeX/texbin/"
+      - "/Users/alex/.cargo/bin/"
+      - "/Users/alex/Library/Application Support/Coursier/bin/"
+    searched_directories:
+      - "/usr/bin/readelf"
+      - "/Users/alex/.opam/cs3110-2025sp/bin/readelf"
+      - "/opt/homebrew/opt/binutils/bin/readelf"
+      - "/Users/alex/.pyenv/shims/readelf"
+      - "/Users/alex/.cabal/bin/readelf"
+      - "/Users/alex/.ghcup/bin/readelf"
+      - "/Users/alex/.nvm/versions/node/v18.20.2/bin/readelf"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/readelf"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/readelf"
+      - "/opt/homebrew/bin/readelf"
+      - "/opt/homebrew/sbin/readelf"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/readelf"
+      - "/usr/local/mysql/bin/readelf"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/readelf"
+      - "/usr/local/bin/readelf"
+      - "/System/Cryptexes/App/usr/bin/readelf"
+      - "/bin/readelf"
+      - "/usr/sbin/readelf"
+      - "/sbin/readelf"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/readelf"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/readelf"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/readelf"
+      - "/Library/Apple/usr/bin/readelf"
+      - "/Library/TeX/texbin/readelf"
+      - "/Users/alex/.cargo/bin/readelf"
+      - "/Users/alex/Library/Application Support/Coursier/bin/readelf"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/Users/alex/.opam/cs3110-2025sp/bin"
+        - "/opt/homebrew/opt/binutils/bin"
+        - "/Users/alex/.pyenv/shims"
+        - "/Users/alex/.cabal/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.nvm/versions/node/v18.20.2/bin"
+        - "/Users/alex/.pyenv/shims"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/usr/local/mysql/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Library/TeX/texbin"
+        - "/Users/alex/.opam/cs3110-2025sp/bin"
+        - "/opt/homebrew/opt/binutils/bin"
+        - "/Users/alex/.cabal/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.nvm/versions/node/v18.20.2/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/Users/alex/.cargo/bin"
+        - "/Users/alex/Library/Application Support/Coursier/bin"
+        - "/Users/alex/Library/Application Support/Coursier/bin"
+        - "/usr/local/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_DLLTOOL"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "dlltool"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/Users/alex/.opam/cs3110-2025sp/bin/"
+      - "/opt/homebrew/opt/binutils/bin/"
+      - "/Users/alex/.pyenv/shims/"
+      - "/Users/alex/.cabal/bin/"
+      - "/Users/alex/.ghcup/bin/"
+      - "/Users/alex/.nvm/versions/node/v18.20.2/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/usr/local/mysql/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Library/TeX/texbin/"
+      - "/Users/alex/.cargo/bin/"
+      - "/Users/alex/Library/Application Support/Coursier/bin/"
+    searched_directories:
+      - "/usr/bin/dlltool"
+      - "/Users/alex/.opam/cs3110-2025sp/bin/dlltool"
+      - "/opt/homebrew/opt/binutils/bin/dlltool"
+      - "/Users/alex/.pyenv/shims/dlltool"
+      - "/Users/alex/.cabal/bin/dlltool"
+      - "/Users/alex/.ghcup/bin/dlltool"
+      - "/Users/alex/.nvm/versions/node/v18.20.2/bin/dlltool"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/dlltool"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/dlltool"
+      - "/opt/homebrew/bin/dlltool"
+      - "/opt/homebrew/sbin/dlltool"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/dlltool"
+      - "/usr/local/mysql/bin/dlltool"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/dlltool"
+      - "/usr/local/bin/dlltool"
+      - "/System/Cryptexes/App/usr/bin/dlltool"
+      - "/bin/dlltool"
+      - "/usr/sbin/dlltool"
+      - "/sbin/dlltool"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/dlltool"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/dlltool"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/dlltool"
+      - "/Library/Apple/usr/bin/dlltool"
+      - "/Library/TeX/texbin/dlltool"
+      - "/Users/alex/.cargo/bin/dlltool"
+      - "/Users/alex/Library/Application Support/Coursier/bin/dlltool"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/Users/alex/.opam/cs3110-2025sp/bin"
+        - "/opt/homebrew/opt/binutils/bin"
+        - "/Users/alex/.pyenv/shims"
+        - "/Users/alex/.cabal/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.nvm/versions/node/v18.20.2/bin"
+        - "/Users/alex/.pyenv/shims"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/usr/local/mysql/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Library/TeX/texbin"
+        - "/Users/alex/.opam/cs3110-2025sp/bin"
+        - "/opt/homebrew/opt/binutils/bin"
+        - "/Users/alex/.cabal/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.nvm/versions/node/v18.20.2/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/Users/alex/.cargo/bin"
+        - "/Users/alex/Library/Application Support/Coursier/bin"
+        - "/Users/alex/Library/Application Support/Coursier/bin"
+        - "/usr/local/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_ADDR2LINE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "addr2line"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/Users/alex/.opam/cs3110-2025sp/bin/"
+      - "/opt/homebrew/opt/binutils/bin/"
+      - "/Users/alex/.pyenv/shims/"
+      - "/Users/alex/.cabal/bin/"
+      - "/Users/alex/.ghcup/bin/"
+      - "/Users/alex/.nvm/versions/node/v18.20.2/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/usr/local/mysql/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Library/TeX/texbin/"
+      - "/Users/alex/.cargo/bin/"
+      - "/Users/alex/Library/Application Support/Coursier/bin/"
+    searched_directories:
+      - "/usr/bin/addr2line"
+      - "/Users/alex/.opam/cs3110-2025sp/bin/addr2line"
+      - "/opt/homebrew/opt/binutils/bin/addr2line"
+      - "/Users/alex/.pyenv/shims/addr2line"
+      - "/Users/alex/.cabal/bin/addr2line"
+      - "/Users/alex/.ghcup/bin/addr2line"
+      - "/Users/alex/.nvm/versions/node/v18.20.2/bin/addr2line"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/addr2line"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/addr2line"
+      - "/opt/homebrew/bin/addr2line"
+      - "/opt/homebrew/sbin/addr2line"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/addr2line"
+      - "/usr/local/mysql/bin/addr2line"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/addr2line"
+      - "/usr/local/bin/addr2line"
+      - "/System/Cryptexes/App/usr/bin/addr2line"
+      - "/bin/addr2line"
+      - "/usr/sbin/addr2line"
+      - "/sbin/addr2line"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/addr2line"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/addr2line"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/addr2line"
+      - "/Library/Apple/usr/bin/addr2line"
+      - "/Library/TeX/texbin/addr2line"
+      - "/Users/alex/.cargo/bin/addr2line"
+      - "/Users/alex/Library/Application Support/Coursier/bin/addr2line"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/Users/alex/.opam/cs3110-2025sp/bin"
+        - "/opt/homebrew/opt/binutils/bin"
+        - "/Users/alex/.pyenv/shims"
+        - "/Users/alex/.cabal/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.nvm/versions/node/v18.20.2/bin"
+        - "/Users/alex/.pyenv/shims"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/usr/local/mysql/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Library/TeX/texbin"
+        - "/Users/alex/.opam/cs3110-2025sp/bin"
+        - "/opt/homebrew/opt/binutils/bin"
+        - "/Users/alex/.cabal/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.nvm/versions/node/v18.20.2/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/Users/alex/.cargo/bin"
+        - "/Users/alex/Library/Application Support/Coursier/bin"
+        - "/Users/alex/Library/Application Support/Coursier/bin"
+        - "/usr/local/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_TAPI"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "tapi"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/Users/alex/.opam/cs3110-2025sp/bin/"
+      - "/opt/homebrew/opt/binutils/bin/"
+      - "/Users/alex/.pyenv/shims/"
+      - "/Users/alex/.cabal/bin/"
+      - "/Users/alex/.ghcup/bin/"
+      - "/Users/alex/.nvm/versions/node/v18.20.2/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/usr/local/mysql/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Library/TeX/texbin/"
+      - "/Users/alex/.cargo/bin/"
+      - "/Users/alex/Library/Application Support/Coursier/bin/"
+    searched_directories:
+      - "/usr/bin/tapi"
+      - "/Users/alex/.opam/cs3110-2025sp/bin/tapi"
+      - "/opt/homebrew/opt/binutils/bin/tapi"
+      - "/Users/alex/.pyenv/shims/tapi"
+      - "/Users/alex/.cabal/bin/tapi"
+      - "/Users/alex/.ghcup/bin/tapi"
+      - "/Users/alex/.nvm/versions/node/v18.20.2/bin/tapi"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/tapi"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/tapi"
+      - "/opt/homebrew/bin/tapi"
+      - "/opt/homebrew/sbin/tapi"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/tapi"
+      - "/usr/local/mysql/bin/tapi"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/tapi"
+      - "/usr/local/bin/tapi"
+      - "/System/Cryptexes/App/usr/bin/tapi"
+      - "/bin/tapi"
+      - "/usr/sbin/tapi"
+      - "/sbin/tapi"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/tapi"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/tapi"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/tapi"
+      - "/Library/Apple/usr/bin/tapi"
+      - "/Library/TeX/texbin/tapi"
+      - "/Users/alex/.cargo/bin/tapi"
+      - "/Users/alex/Library/Application Support/Coursier/bin/tapi"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/Users/alex/.opam/cs3110-2025sp/bin"
+        - "/opt/homebrew/opt/binutils/bin"
+        - "/Users/alex/.pyenv/shims"
+        - "/Users/alex/.cabal/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.nvm/versions/node/v18.20.2/bin"
+        - "/Users/alex/.pyenv/shims"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/usr/local/mysql/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Library/TeX/texbin"
+        - "/Users/alex/.opam/cs3110-2025sp/bin"
+        - "/opt/homebrew/opt/binutils/bin"
+        - "/Users/alex/.cabal/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.nvm/versions/node/v18.20.2/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/Users/alex/.cargo/bin"
+        - "/Users/alex/Library/Application Support/Coursier/bin"
+        - "/Users/alex/Library/Application Support/Coursier/bin"
+        - "/usr/local/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Platform/Darwin.cmake:76 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInformation.cmake:32 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_INSTALL_NAME_TOOL"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "install_name_tool"
+    candidate_directories:
+      - "/Users/alex/.opam/cs3110-2025sp/bin/"
+      - "/opt/homebrew/opt/binutils/bin/"
+      - "/Users/alex/.pyenv/shims/"
+      - "/Users/alex/.cabal/bin/"
+      - "/Users/alex/.ghcup/bin/"
+      - "/Users/alex/.nvm/versions/node/v18.20.2/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/usr/local/mysql/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Library/TeX/texbin/"
+      - "/Users/alex/.cargo/bin/"
+      - "/Users/alex/Library/Application Support/Coursier/bin/"
+    searched_directories:
+      - "/Users/alex/.opam/cs3110-2025sp/bin/install_name_tool"
+      - "/opt/homebrew/opt/binutils/bin/install_name_tool"
+      - "/Users/alex/.pyenv/shims/install_name_tool"
+      - "/Users/alex/.cabal/bin/install_name_tool"
+      - "/Users/alex/.ghcup/bin/install_name_tool"
+      - "/Users/alex/.nvm/versions/node/v18.20.2/bin/install_name_tool"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/install_name_tool"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/install_name_tool"
+      - "/opt/homebrew/bin/install_name_tool"
+      - "/opt/homebrew/sbin/install_name_tool"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/install_name_tool"
+      - "/usr/local/mysql/bin/install_name_tool"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/install_name_tool"
+      - "/usr/local/bin/install_name_tool"
+      - "/System/Cryptexes/App/usr/bin/install_name_tool"
+    found: "/usr/bin/install_name_tool"
+    search_context:
+      ENV{PATH}:
+        - "/Users/alex/.opam/cs3110-2025sp/bin"
+        - "/opt/homebrew/opt/binutils/bin"
+        - "/Users/alex/.pyenv/shims"
+        - "/Users/alex/.cabal/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.nvm/versions/node/v18.20.2/bin"
+        - "/Users/alex/.pyenv/shims"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/usr/local/mysql/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Library/TeX/texbin"
+        - "/Users/alex/.opam/cs3110-2025sp/bin"
+        - "/opt/homebrew/opt/binutils/bin"
+        - "/Users/alex/.cabal/bin"
+        - "/Users/alex/.ghcup/bin"
+        - "/Users/alex/.nvm/versions/node/v18.20.2/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/Users/alex/.cargo/bin"
+        - "/Users/alex/Library/Application Support/Coursier/bin"
+        - "/Users/alex/Library/Application Support/Coursier/bin"
+        - "/usr/local/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/Users/alex/Desktop/ObsidianSQL/build/CMakeFiles/CMakeScratch/TryCompile-pCNIE6"
+      binary: "/Users/alex/Desktop/ObsidianSQL/build/CMakeFiles/CMakeScratch/TryCompile-pCNIE6"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/alex/Desktop/ObsidianSQL/build/CMakeFiles/CMakeScratch/TryCompile-pCNIE6'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_5a224/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_5a224.dir/build.make CMakeFiles/cmTC_5a224.dir/build
+        Building CXX object CMakeFiles/cmTC_5a224.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -v -Wl,-v -MD -MT CMakeFiles/cmTC_5a224.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_5a224.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_5a224.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Apple clang version 16.0.0 (clang-1600.0.26.6)
+        Target: arm64-apple-darwin24.0.0
+        Thread model: posix
+        InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+        clang++: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
+        ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx15.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.0 -fvisibility-inlines-hidden-static-local-var -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +lse -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-abi darwinpcs -debugger-tuning=lldb -target-linker-version 1115.7.3 -v -fcoverage-compilation-dir=/Users/alex/Desktop/ObsidianSQL/build/CMakeFiles/CMakeScratch/TryCompile-pCNIE6 -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16 -dependency-file CMakeFiles/cmTC_5a224.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_5a224.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -fdebug-compilation-dir=/Users/alex/Desktop/ObsidianSQL/build/CMakeFiles/CMakeScratch/TryCompile-pCNIE6 -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_5a224.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        clang -cc1 version 16.0.0 (clang-1600.0.26.6) default target arm64-apple-darwin24.0.0
+        ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include"
+        ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Library/Frameworks"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/local/include
+         /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1
+         /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include
+         /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include
+         /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
+         /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
+        End of search list.
+        Linking CXX executable cmTC_5a224
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5a224.dir/link.txt --verbose=1
+        Apple clang version 16.0.0 (clang-1600.0.26.6)
+        Target: arm64-apple-darwin24.0.0
+        Thread model: posix
+        InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 15.0 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_5a224 -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_5a224.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a
+        @(#)PROGRAM:ld PROJECT:ld-1115.7.3
+        BUILD 23:52:02 Dec  5 2024
+        configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+        will use ld-classic for: armv6 armv7 armv7s i386 armv6m armv7k armv7m armv7em
+        LTO support using: LLVM version 16.0.0 (static support for 29, runtime is 29)
+        TAPI support using: Apple TAPI version 16.0.0 (tapi-1600.0.11.9)
+        Library search paths:
+        	/usr/local/lib
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/swift
+        Framework search paths:
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks
+        /usr/bin/c++ -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_5a224.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_5a224
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:122 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Effective list of requested architectures (possibly empty)  : ""
+      Effective list of architectures found in the ABI info binary: "arm64"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/local/include]
+          add: [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1]
+          add: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include]
+          add: [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
+          add: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+        end of search list found
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1]
+        collapse include dir [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include] ==> [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include]
+        collapse include dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
+        collapse include dir [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include] ==> [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+        implicit include dirs: [/usr/local/include;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1;/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include;/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
+        ignore line: [Change Dir: '/Users/alex/Desktop/ObsidianSQL/build/CMakeFiles/CMakeScratch/TryCompile-pCNIE6']
+        ignore line: []
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_5a224/fast]
+        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_5a224.dir/build.make CMakeFiles/cmTC_5a224.dir/build]
+        ignore line: [Building CXX object CMakeFiles/cmTC_5a224.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/c++   -v -Wl -v -MD -MT CMakeFiles/cmTC_5a224.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_5a224.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_5a224.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Apple clang version 16.0.0 (clang-1600.0.26.6)]
+        ignore line: [Target: arm64-apple-darwin24.0.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
+        ignore line: [clang++: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
+        ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"]
+        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx15.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.0 -fvisibility-inlines-hidden-static-local-var -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +lse -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-abi darwinpcs -debugger-tuning=lldb -target-linker-version 1115.7.3 -v -fcoverage-compilation-dir=/Users/alex/Desktop/ObsidianSQL/build/CMakeFiles/CMakeScratch/TryCompile-pCNIE6 -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16 -dependency-file CMakeFiles/cmTC_5a224.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_5a224.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -fdebug-compilation-dir=/Users/alex/Desktop/ObsidianSQL/build/CMakeFiles/CMakeScratch/TryCompile-pCNIE6 -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_5a224.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [clang -cc1 version 16.0.0 (clang-1600.0.26.6) default target arm64-apple-darwin24.0.0]
+        ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include"]
+        ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Library/Frameworks"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1]
+        ignore line: [ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include]
+        ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
+        ignore line: [ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+        ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)]
+        ignore line: [End of search list.]
+        ignore line: [Linking CXX executable cmTC_5a224]
+        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5a224.dir/link.txt --verbose=1]
+        ignore line: [Apple clang version 16.0.0 (clang-1600.0.26.6)]
+        ignore line: [Target: arm64-apple-darwin24.0.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
+        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 15.0 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_5a224 -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_5a224.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a]
+          arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
+          arg [-demangle] ==> ignore
+          arg [-lto_library] ==> ignore, skip following value
+          arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib] ==> skip value of -lto_library
+          arg [-dynamic] ==> ignore
+          arg [-arch] ==> ignore
+          arg [arm64] ==> ignore
+          arg [-platform_version] ==> ignore
+          arg [macos] ==> ignore
+          arg [15.0.0] ==> ignore
+          arg [15.0] ==> ignore
+          arg [-syslibroot] ==> ignore
+          arg [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk] ==> ignore
+          arg [-mllvm] ==> ignore
+          arg [-enable-linkonceodr-outlining] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_5a224] ==> ignore
+          arg [-L/usr/local/lib] ==> dir [/usr/local/lib]
+          arg [-search_paths_first] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_5a224.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lc++] ==> lib [c++]
+          arg [-lSystem] ==> lib [System]
+          arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a]
+        linker tool for 'CXX': /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld
+        Library search paths: [;/usr/local/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/swift]
+        Framework search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks]
+        remove lib [System]
+        remove lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a]
+        collapse library dir [/usr/local/lib] ==> [/usr/local/lib]
+        collapse library dir [/usr/local/lib] ==> [/usr/local/lib]
+        collapse library dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        collapse library dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/swift] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/swift]
+        collapse framework dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks]
+        implicit libs: [c++]
+        implicit objs: []
+        implicit dirs: [/usr/local/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/swift]
+        implicit fwks: [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the CXX compiler's linker: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" "-v"
+      @(#)PROGRAM:ld PROJECT:ld-1115.7.3
+      BUILD 23:52:02 Dec  5 2024
+      configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+      will use ld-classic for: armv6 armv7 armv7s i386 armv6m armv7k armv7m armv7em
+      LTO support using: LLVM version 16.0.0 (static support for 29, runtime is 29)
+      TAPI support using: Apple TAPI version 16.0.0 (tapi-1600.0.11.9)
+...

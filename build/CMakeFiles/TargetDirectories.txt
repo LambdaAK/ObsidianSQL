@@ -1,0 +1,4 @@
+/Users/alex/Desktop/ObsidianSQL/build/CMakeFiles/obsidian_sql.dir
+/Users/alex/Desktop/ObsidianSQL/build/CMakeFiles/obsidian_sql_main.dir
+/Users/alex/Desktop/ObsidianSQL/build/CMakeFiles/edit_cache.dir
+/Users/alex/Desktop/ObsidianSQL/build/CMakeFiles/rebuild_cache.dir
